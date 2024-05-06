@@ -1,0 +1,98 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom, #2c3268, #a9249a);
+            margin: 0;
+            padding: 0;
+        }
+
+       .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+       .detail-label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+       .detail-value {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Profile</h2>
+        <div class="detail-section">
+            <h3>Personal Details</h3>
+            <div class="detail-label">Name:</div>
+            <div class="detail-value" id="name"></div>
+
+            <div class="detail-label">Age:</div>
+            <div class="detail-value" id="age"></div>
+
+            <div class="detail-label">Sex:</div>
+            <div class="detail-value" id="sex"></div>
+        </div>
+
+        <div class="detail-section">
+            <h3>Contact Information</h3>
+            <div class="detail-label">Address:</div>
+            <div class="detail-value" id="address"></div>
+
+            <div class="detail-label">Email:</div>
+            <div class="detail-value" id="email"></div>
+
+            <div class="detail-label">Contact Number:</div>
+            <div class="detail-value" id="contact"></div>
+        </div>
+
+        <div class="detail-section">
+            <h3>Skills</h3>
+            <div class="detail-label">Skills:</div>
+            <div class="detail-value" id="skills"></div>
+        </div>
+    </div>
+
+    <script>
+        // Get the submitted details from the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+        const age = urlParams.get('age');
+        const sex = urlParams.get('sex');
+        const address = urlParams.get('address');
+        const email = urlParams.get('email');
+        const contact = urlParams.get('contact');
+        const skills = urlParams.get('skills');
+
+        // Populate the page with the submitted details
+        document.getElementById('name').textContent = name;
+        document.getElementById('age').textContent = age;
+        document.getElementById('sex').textContent = sex;
+        document.getElementById('address').textContent = address;
+        document.getElementById('email').textContent = email;
+        document.getElementById('contact').textContent = contact;
+        document.getElementById('skills').textContent = skills;
+    </script>
+    
+</body>
+</html>
